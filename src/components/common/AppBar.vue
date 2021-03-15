@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app-bar dense>
+    <v-app-bar dense app>
       <v-toolbar-title>Timers app</v-toolbar-title>
     </v-app-bar>
   </div>
