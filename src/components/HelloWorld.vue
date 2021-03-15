@@ -14,6 +14,10 @@
             target="_blank"
           >Discord Community</a>
         </p>
+
+        <p>
+          {{ $t('message') }}
+        </p>
       </v-col>
 
       <v-col
