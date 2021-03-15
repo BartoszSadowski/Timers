@@ -4,7 +4,7 @@
     max-width="600"
   >
     <v-card-title>
-      Add new timer
+      Timer list
     </v-card-title>
 
     <v-card-text> Placeholder text </v-card-text>
@@ -13,6 +13,6 @@
 
 <script>
 export default {
-  name: 'TimerAdder',
+  name: 'TimerList',
 };
 </script>
