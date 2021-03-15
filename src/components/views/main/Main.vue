@@ -1,7 +1,10 @@
 <template>
   <v-main class="mt-2">
     <TimerAdder class="ma-4" />
-    <TimerList class="ma-4" />
+    <TimerList
+      class="ma-4"
+      :list="timers"
+    />
   </v-main>
 </template>
 
@@ -15,6 +18,12 @@ export default {
   components: {
     TimerAdder,
     TimerList,
+  },
+
+  computed: {
+    timers() {
+      return this.$store.state.timers.list;
+    },
   },
 };
 </script>

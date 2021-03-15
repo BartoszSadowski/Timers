@@ -7,12 +7,24 @@
       Timer list
     </v-card-title>
 
-    <v-card-text> Placeholder text </v-card-text>
+    <v-card-text
+      v-for="item in list"
+      :key="item.id"
+    >
+      {{ item.id }} : {{ item.date }}
+    </v-card-text>
   </v-card>
 </template>
 
 <script>
 export default {
   name: 'TimerList',
+
+  props: {
+    list: {
+      type: Array,
+      require: true,
+    },
+  },
 };
 </script>
