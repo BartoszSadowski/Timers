@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import Main from './components/views/Main.vue';
+import Main from './components/views/main/Main.vue';
 import AppBar from './components/common/AppBar.vue';
 import AppFooter from './components/common/AppFooter.vue';
 
