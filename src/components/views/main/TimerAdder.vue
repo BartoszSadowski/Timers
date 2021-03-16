@@ -15,6 +15,7 @@
             label="New counter"
             prepend-icon="mdi-clock"
             readonly
+            @click="openPicker"
           />
         </v-col>
         <v-col>
@@ -28,17 +29,39 @@
         </v-col>
       </v-row>
     </form>
+
+    <TimePicker
+      :open="pickerOpen"
+      @close="closePicker"
+    />
   </v-card>
 </template>
 
 <script>
+import TimePicker from './TimePicker.vue';
+
 export default {
   name: 'TimerAdder',
+
+  components: {
+    TimePicker,
+  },
 
   data() {
     return {
       datetime: new Date(),
+      pickerOpen: false,
     };
+  },
+
+  methods: {
+    openPicker() {
+      this.pickerOpen = true;
+    },
+
+    closePicker() {
+      this.pickerOpen = false;
+    },
   },
 };
 </script>
