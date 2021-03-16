@@ -1,29 +1,42 @@
 <template>
   <v-sheet class="pa-2 ma-2" elevation="1">
       <v-row>
-        <v-col lg="3">
+        <v-col>
           <TimePresenter
             :number="timeLeft.days"
             title="Days"
           />
         </v-col>
-        <v-col lg="3">
+        <v-col>
           <TimePresenter
             :number="timeLeft.hours"
             title="Hours"
           />
         </v-col>
-        <v-col lg="3">
+        <v-col>
           <TimePresenter
             :number="timeLeft.minutes"
             title="Minutes"
           />
         </v-col>
-        <v-col lg="3">
+        <v-col>
           <TimePresenter
             :number="timeLeft.seconds"
             title="Seconds"
           />
+        </v-col>
+        <v-col>
+          <v-container fill-height fluid>
+            <v-row align="center"
+              justify="center"
+            >
+              <v-icon
+                @click="removeItem(timer)"
+              >
+                mdi-minus
+              </v-icon>
+            </v-row>
+          </v-container>
         </v-col>
       </v-row>
   </v-sheet>
@@ -64,6 +77,12 @@ export default {
     setInterval(() => {
       this.now = new Date();
     }, 1000);
+  },
+
+  methods: {
+    removeItem({ id }) {
+      console.log(id);
+    },
   },
 };
 </script>

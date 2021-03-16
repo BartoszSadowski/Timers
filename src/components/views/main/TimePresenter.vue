@@ -1,9 +1,9 @@
 <template>
   <div class="ma-2 pa-2">
-    <v-row>
+    <v-row class="justify-center">
       {{ title }}
     </v-row>
-    <v-row>
+    <v-row class="justify-center">
       {{ number }}
     </v-row>
   </div>
