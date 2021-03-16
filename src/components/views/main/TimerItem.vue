@@ -1,6 +1,6 @@
 <template>
   <v-sheet class="pa-2 ma-2" elevation="1">
-    {{ timer.id }} - {{ timer.date }}
+    {{ timer.date }} : {{ timeLeft }}
   </v-sheet>
 </template>
 
@@ -13,6 +13,24 @@ export default {
       type: Object,
       require: true,
     },
+  },
+
+  data() {
+    return {
+      now: new Date(),
+    };
+  },
+
+  computed: {
+    timeLeft() {
+      return this.timer.date - this.now;
+    },
+  },
+
+  created() {
+    setInterval(() => {
+      this.now = new Date();
+    }, 1000);
   },
 };
 </script>
