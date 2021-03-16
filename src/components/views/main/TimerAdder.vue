@@ -23,7 +23,7 @@
           <v-btn
                 icon
                 elevation="2"
-                @click="removeItem(timer)"
+                @click="addItem"
               >
                 <v-icon>mdi-plus</v-icon>
               </v-btn>
@@ -52,6 +52,15 @@ export default {
       time: '',
       pickerOpen: false,
     };
+  },
+
+  methods: {
+    addItem() {
+      const datetimeString = `${this.date} ${this.time}`;
+      const datetime = new Date(datetimeString);
+
+      this.$store.dispatch('addTimer', datetime);
+    },
   },
 };
 </script>

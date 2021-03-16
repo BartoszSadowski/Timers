@@ -1,3 +1,6 @@
+import actions from './actions';
+import mutations from './mutations';
+
 const state = {
   list: [{
     id: 1,
@@ -10,4 +13,6 @@ const state = {
 
 export default {
   state,
+  actions,
+  mutations,
 };
