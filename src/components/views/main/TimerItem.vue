@@ -1,10 +1,16 @@
 <template>
   <v-sheet class="pa-2 ma-2" elevation="1">
-    {{ timer.date }} : {{ timeLeft }}
+    Left
+      {{ timeLeft.days }}
+      : {{ timeLeft.hours }}
+      : {{ timeLeft.minutes }}
+      : {{ timeLeft.seconds }}
   </v-sheet>
 </template>
 
 <script>
+import { msToTimeObj } from '../../../utils/time';
+
 export default {
   name: 'TimerItem',
 
@@ -23,7 +29,7 @@ export default {
 
   computed: {
     timeLeft() {
-      return this.timer.date - this.now;
+      return msToTimeObj(this.timer.date - this.now);
     },
   },
 
