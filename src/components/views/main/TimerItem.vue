@@ -30,11 +30,13 @@
             <v-row align="center"
               justify="center"
             >
-              <v-icon
+              <v-btn
+                icon
+                elevation="2"
                 @click="removeItem(timer)"
               >
-                mdi-minus
-              </v-icon>
+                <v-icon>mdi-minus</v-icon>
+              </v-btn>
             </v-row>
           </v-container>
         </v-col>
