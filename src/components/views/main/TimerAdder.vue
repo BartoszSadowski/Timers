@@ -10,7 +10,12 @@
     <form>
       <v-row class="pl-4">
         <v-col md="10">
-          Date placeholder
+          <v-text-field
+            v-model="datetime"
+            label="New counter"
+            prepend-icon="mdi-clock"
+            readonly
+          />
         </v-col>
         <v-col>
           <v-btn
@@ -29,5 +34,11 @@
 <script>
 export default {
   name: 'TimerAdder',
+
+  data() {
+    return {
+      datetime: new Date(),
+    };
+  },
 };
 </script>
