@@ -4,7 +4,9 @@
       {{ title }}
     </v-row>
     <v-row class="justify-center">
-      {{ number }}
+      <div class="number-container">
+        {{ `${number}`.padStart(2, '0') }}
+      </div>
     </v-row>
   </div>
 </template>
@@ -25,3 +27,12 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.number-container {
+  padding: 5px;
+  border: 1px solid #E3E3E3;
+  box-shadow: 1px 2px 3px #808080;
+  border-radius: 3px;
+}
+</style>
