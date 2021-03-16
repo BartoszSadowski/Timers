@@ -9,13 +9,14 @@
 
     <form>
       <v-row class="pl-4">
-        <v-col md="10">
-          <v-text-field
-            v-model="datetime"
-            label="New counter"
-            prepend-icon="mdi-clock"
-            readonly
-            @click="openPicker"
+        <v-col md="5">
+          <TimePicker
+            v-model="time"
+          />
+        </v-col>
+        <v-col md="5">
+          <DatePicker
+            v-model="date"
           />
         </v-col>
         <v-col>
@@ -30,38 +31,27 @@
       </v-row>
     </form>
 
-    <TimePicker
-      :open="pickerOpen"
-      @close="closePicker"
-    />
   </v-card>
 </template>
 
 <script>
 import TimePicker from './TimePicker.vue';
+import DatePicker from './DatePicker.vue';
 
 export default {
   name: 'TimerAdder',
 
   components: {
     TimePicker,
+    DatePicker,
   },
 
   data() {
     return {
-      datetime: new Date(),
+      date: '',
+      time: '',
       pickerOpen: false,
     };
-  },
-
-  methods: {
-    openPicker() {
-      this.pickerOpen = true;
-    },
-
-    closePicker() {
-      this.pickerOpen = false;
-    },
   },
 };
 </script>

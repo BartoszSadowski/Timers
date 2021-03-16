@@ -8,46 +8,45 @@
   >
     <template v-slot:activator="{ on, attrs }">
       <v-text-field
-        v-model="timeItem"
-        label="Pick time"
-        prepend-icon="mdi-clock"
+        v-model="dateItem"
+        label="Pick a date"
+        prepend-icon="mdi-calendar"
         readonly
         v-bind="attrs"
         v-on="on"
       ></v-text-field>
     </template>
-    <v-time-picker
-      v-model="timeItem"
-      format="24hr"
-      use-seconds
+    <v-date-picker
+      v-model="dateItem"
+      no-title
     />
   </v-menu>
 </template>
 
 <script>
 export default {
-  name: 'TimePicker',
+  name: 'DatePicker',
 
   model: {
-    prop: 'time',
+    prop: 'date',
     event: 'update',
   },
 
   props: {
-    time: {
+    date: {
       type: String,
       require: true,
     },
   },
 
   computed: {
-    timeItem: {
+    dateItem: {
       get() {
-        return this.time;
+        return this.date;
       },
 
-      set(time) {
-        this.$emit('update', time);
+      set(date) {
+        this.$emit('update', date);
       },
     },
   },
