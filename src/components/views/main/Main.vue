@@ -25,5 +25,9 @@ export default {
       return this.$store.state.timers.list;
     },
   },
+
+  created() {
+    this.$store.dispatch('loadTimerList');
+  },
 };
 </script>

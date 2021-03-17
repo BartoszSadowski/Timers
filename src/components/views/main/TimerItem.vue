@@ -74,7 +74,6 @@ export default {
       if (timeLeft < 0) {
         this.removeItem(this.timer);
       }
-
       return msToTimeObj(timeLeft);
     },
   },

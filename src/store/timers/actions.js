@@ -22,7 +22,12 @@ export default {
 
   loadTimerList({ commit, dispatch }) {
     const timersList = loadState(timersKey);
-    commit('loadTimerList', timersList);
+
+    const mappedTimersList = timersList
+      .map((timer) => ({ ...timer, date: new Date(timer.date) }))
+      .filter((timer) => timer.date > new Date());
+
+    commit('loadTimerList', mappedTimersList);
     dispatch('updateTimerList');
   },
 };
