@@ -2,5 +2,7 @@
   "THEME": {
     "SWITCH_LIGHT": "Switch to light mode",
     "SWITCH_DARK": "Switch to dark mode"
-  }
+  },
+  "LANGUAGE": "Choose language"
+
 }

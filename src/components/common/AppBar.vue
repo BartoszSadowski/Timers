@@ -21,7 +21,7 @@
             v-on="on"
           >
             <v-icon>mdi-dots-vertical</v-icon>
-            Choose language
+            {{ $t('LANGUAGE') }}
           </v-btn>
         </template>
 
