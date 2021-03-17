@@ -17,5 +17,8 @@
     "MINUTES": "Minutes",
     "HOURS": "Hours",
     "DAYS": "Days"
+  },
+  "TIMER_LIST": {
+    "TITLE": "Timer List"
   }
 }

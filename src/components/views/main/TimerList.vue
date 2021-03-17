@@ -4,7 +4,7 @@
     max-width="600"
   >
     <v-card-title>
-      Timer list
+      {{ $t('TIMER_LIST.TITLE') }}
     </v-card-title>
 
     <TimerItem
