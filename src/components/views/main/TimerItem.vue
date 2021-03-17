@@ -61,24 +61,16 @@ export default {
       type: Object,
       require: true,
     },
-  },
-
-  data() {
-    return {
-      now: new Date(),
-    };
+    now: {
+      type: Date,
+      require: true,
+    },
   },
 
   computed: {
     timeLeft() {
       return msToTimeObj(this.timer.date - this.now);
     },
-  },
-
-  created() {
-    setInterval(() => {
-      this.now = new Date();
-    }, 1000);
   },
 
   methods: {

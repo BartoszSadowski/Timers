@@ -10,6 +10,7 @@
     <TimerItem
       v-for="item in list"
       :key="item.id"
+      :now="now"
       :timer="item"
     />
   </v-card>
@@ -30,6 +31,18 @@ export default {
       type: Array,
       require: true,
     },
+  },
+
+  data() {
+    return {
+      now: new Date(),
+    };
+  },
+
+  created() {
+    setInterval(() => {
+      this.now = new Date();
+    }, 1000);
   },
 };
 </script>
