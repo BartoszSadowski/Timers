@@ -16,12 +16,12 @@
       >
         <template v-slot:activator="{ on, attrs}">
           <v-btn
-            icon
-            class="mr-1"
+            text
             v-bind="attrs"
             v-on="on"
           >
             <v-icon>mdi-dots-vertical</v-icon>
+            Choose language
           </v-btn>
         </template>
 
@@ -33,7 +33,8 @@
           >
             <v-btn
               text
-              class="ma-0"
+              block
+              @click="changeLocale(locale)"
             >
               {{ locale }}
             </v-btn>
@@ -57,6 +58,14 @@ export default {
   computed: {
     darkModeMessage() {
       return this.$vuetify.theme.dark ? this.$t('THEME.SWITCH_LIGHT') : this.$t('THEME.SWITCH_DARK');
+    },
+  },
+
+  methods: {
+    changeLocale(locale) {
+      if (this.$i18n.locale !== locale) {
+        this.$i18n.locale = locale;
+      }
     },
   },
 };
