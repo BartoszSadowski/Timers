@@ -7,4 +7,8 @@ export default {
 
     state.list.push(item);
   },
+
+  removeTimer(state, id) {
+    state.list = state.list.filter((timer) => timer.id !== id);
+  },
 };

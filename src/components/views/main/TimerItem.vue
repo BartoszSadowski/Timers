@@ -69,13 +69,19 @@ export default {
 
   computed: {
     timeLeft() {
-      return msToTimeObj(this.timer.date - this.now);
+      const timeLeft = this.timer.date - this.now;
+
+      if (timeLeft < 0) {
+        this.removeItem(this.timer);
+      }
+
+      return msToTimeObj(timeLeft);
     },
   },
 
   methods: {
     removeItem({ id }) {
-      console.log(id);
+      this.$store.dispatch('removeTimer', id);
     },
   },
 };
