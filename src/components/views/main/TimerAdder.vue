@@ -4,7 +4,7 @@
     max-width="600"
   >
     <v-card-title>
-      Add new timer
+      {{ $t('TIMER_ADDER.TITLE') }}
     </v-card-title>
 
     <form>
@@ -60,7 +60,7 @@ export default {
       time: '',
       errorInfo: {
         open: false,
-        text: 'Timer must point to the future',
+        text: this.$t('TIMER_ADDER.ERROR'),
         timeout: 1000,
       },
     };

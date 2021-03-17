@@ -9,7 +9,7 @@
     <template v-slot:activator="{ on, attrs }">
       <v-text-field
         v-model="timeItem"
-        label="Pick time"
+        :label="$t('PICKERS.TIME_LABEL')"
         prepend-icon="mdi-clock"
         readonly
         v-bind="attrs"

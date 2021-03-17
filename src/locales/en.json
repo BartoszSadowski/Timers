@@ -5,7 +5,17 @@
   },
   "LANGUAGE": "Choose language",
   "PICKERS": {
-    "DATE_LABEL": "Pick a date"
-  } 
-
+    "DATE_LABEL": "Pick a date",
+    "TIME_LABEL": "Pick time"
+  },
+  "TIMER_ADDER": {
+    "TITLE": "Add new timer",
+    "ERROR": "Timer must point to the future"
+  },
+  "TIMER_ITEM": {
+    "SECONDS": "Seconds",
+    "MINUTES": "Minutes",
+    "HOURS": "Hours",
+    "DAYS": "Days"
+  }
 }

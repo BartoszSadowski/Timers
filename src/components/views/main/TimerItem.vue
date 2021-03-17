@@ -4,25 +4,25 @@
         <v-col>
           <TimePresenter
             :number="timeLeft.days"
-            title="Days"
+            :title="$t('TIMER_ITEM.DAYS')"
           />
         </v-col>
         <v-col>
           <TimePresenter
             :number="timeLeft.hours"
-            title="Hours"
+            :title="$t('TIMER_ITEM.HOURS')"
           />
         </v-col>
         <v-col>
           <TimePresenter
             :number="timeLeft.minutes"
-            title="Minutes"
+            :title="$t('TIMER_ITEM.MINUTES')"
           />
         </v-col>
         <v-col>
           <TimePresenter
             :number="timeLeft.seconds"
-            title="Seconds"
+            :title="$t('TIMER_ITEM.MINUTES')"
           />
         </v-col>
         <v-col>
