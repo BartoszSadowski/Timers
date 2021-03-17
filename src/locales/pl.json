@@ -2,6 +2,24 @@
     "THEME": {
       "SWITCH_LIGHT": "Zmień motyw na jasny",
       "SWITCH_DARK": "Zmień motyw na ciemny"
+    },
+    "LANGUAGE": "Wybierz język",
+    "PICKERS": {
+      "DATE_LABEL": "Wybierz datę",
+      "TIME_LABEL": "Wybierz czas"
+    },
+    "TIMER_ADDER": {
+      "TITLE": "Dodaj nowy timer",
+      "ERROR": "Czas i data timera musi być w przyszłości"
+    },
+    "TIMER_ITEM": {
+      "SECONDS": "Sekundy",
+      "MINUTES": "Minuty",
+      "HOURS": "Godziny",
+      "DAYS": "Dni"
+    },
+    "TIMER_LIST": {
+      "TITLE": "Lista timerów"
     }
   }
   

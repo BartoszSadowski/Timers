@@ -22,7 +22,7 @@
         <v-col>
           <TimePresenter
             :number="timeLeft.seconds"
-            :title="$t('TIMER_ITEM.MINUTES')"
+            :title="$t('TIMER_ITEM.SECONDS')"
           />
         </v-col>
         <v-col>
