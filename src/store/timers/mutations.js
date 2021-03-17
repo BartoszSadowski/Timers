@@ -11,4 +11,8 @@ export default {
   removeTimer(state, id) {
     state.list = state.list.filter((timer) => timer.id !== id);
   },
+
+  loadTimerList(state, load) {
+    state.list = load;
+  },
 };
