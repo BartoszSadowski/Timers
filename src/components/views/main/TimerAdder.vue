@@ -31,6 +31,14 @@
       </v-row>
     </form>
 
+    <v-snackbar
+      v-model="errorInfo.open"
+      :timeout="errorInfo.timeout"
+      top
+    >
+      {{ errorInfo.text }}
+    </v-snackbar>
+
   </v-card>
 </template>
 
@@ -50,7 +58,11 @@ export default {
     return {
       date: '',
       time: '',
-      pickerOpen: false,
+      errorInfo: {
+        open: false,
+        text: 'Timer must point to the future',
+        timeout: 1000,
+      },
     };
   },
 
@@ -58,6 +70,11 @@ export default {
     addItem() {
       const datetimeString = `${this.date} ${this.time}`;
       const datetime = new Date(datetimeString);
+
+      if (datetime - new Date() < 0) {
+        this.errorInfo.open = true;
+        return;
+      }
 
       this.$store.dispatch('addTimer', datetime);
     },
