@@ -9,7 +9,7 @@
     <template v-slot:activator="{ on, attrs }">
       <v-text-field
         v-model="dateItem"
-        label="Pick a date"
+        :label="$t('PICKERS.DATE_LABEL')"
         prepend-icon="mdi-calendar"
         readonly
         v-bind="attrs"
@@ -19,6 +19,7 @@
     <v-date-picker
       v-model="dateItem"
       no-title
+      :locale="$i18n.locale"
     />
   </v-menu>
 </template>
